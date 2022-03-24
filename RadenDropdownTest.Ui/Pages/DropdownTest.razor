@@ -1,0 +1,15 @@
+﻿@using RadenDropdownTest.Ui.Pages.Components
+@page "/dropdowntest"
+
+<h3>Dropdown Test</h3>
+
+<p>Current count: @CurrentComponentCount</p>
+<p>Time until removal of component: @SecondsToRemoval</p>
+
+<button class="btn btn-primary" @onclick="AddComponent">Add Component</button>
+
+
+@for (int i = 0; i < CurrentComponentCount; i++)
+{
+    <ComponentWithDropdown/>
+}

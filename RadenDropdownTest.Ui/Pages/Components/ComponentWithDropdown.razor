@@ -1,0 +1,14 @@
+@using Radzen.Blazor
+
+<div>
+    <RadzenSplitButton Text="DropDown1">
+        <ChildContent>
+            @{
+                for (int dropdownNumber = 1; dropdownNumber <= 3; dropdownNumber++)
+                {
+                    <RadzenSplitButtonItem Text="@dropdownNumber.ToString()" Value=@dropdownNumber.ToString() />
+                }
+            }
+        </ChildContent>
+    </RadzenSplitButton>
+</div>
